@@ -12,3 +12,8 @@ File name ***Assignment4PaperReviews.sql*** contains scripts to:
   - ```REVIEWER```
   - ```TOPIC```
   - ```REVIEW```
+  - ```SUBMITS_PAPER```
+  - ```ASSIGNED_REVIEWER```
+  - ```SUBMITS_REVIEW```
+  - ```HAS```
+4. Insert data from the file titled PaperReviewDataInsert.sql
