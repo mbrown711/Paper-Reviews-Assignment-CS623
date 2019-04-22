@@ -35,6 +35,6 @@ File name ***PaperReview.sql*** contains scripts to:
     
 4. Repeat the same process, except use the file name PaperReviewDataInsert.sql. For example:
 
-    ```source /Users/macbook/Desktop/PaperReviewDataInsert.sql;```
+    ```mysql> source /Users/macbook/Desktop/PaperReviewDataInsert.sql;```
     
     This will insert all of the data into each table that we created in step 3.
