@@ -1,21 +1,76 @@
 CREATE DATABASE PaperReviews;
 
-USE PaperReviews;
+CREATE TABLE Paper (
 
-CREATE TABLE AUTHOR (EmailAddr VARCHAR(50) NOT NULL, FirstName VARCHAR(50) NOT NULL, LastName VARCHAR(50) NOT NULL, PRIMARY KEY (EmailAddr));
+  Id INT NOT NULL AUTO_INCREMENT,
+  Title VARCHAR(100) NULL,
+  Abstract TEXT NULL,
+  FileName VARCHAR(45) NULL,
+  PRIMARY KEY (Id)
+  
+  );
 
-CREATE TABLE PAPER (Id INT NOT NULL AUTO_INCREMENT, Title VARCHAR(100), Abstract TEXT, FileName VARCHAR(25), PRIMARY KEY(Id));
+CREATE TABLE Author (
 
-CREATE TABLE REVIEWER (ReviewerEmailAddr VARCHAR(50), FirstName VARCHAR(50), LastName VARCHAR(50), PhoneNum VARCHAR(50), AuthorFeedback TEXT NOT NULL, CommiteeFeedback TEXT NOT NULL, Affiliation TEXT, PRIMARY KEY (ReviewerEmailAddr));
+  EmailAddr VARCHAR(50) NOT NULL,
+  FirstName VARCHAR(50) NOT NULL,
+  LastName VARCHAR(50) NOT NULL,
+  Paper_Id INT NOT NULL,
+  PRIMARY KEY (EmailAddr, Paper_Id),
+  FOREIGN KEY (Paper_Id)
+  REFERENCES Paper (Id)
+  
+  );
 
-CREATE TABLE TOPIC (Id INT NOT NULL AUTO_INCREMENT, TopicName VARCHAR(100), FOREIGN KEY (Id) REFERENCES PAPER(Id));
+CREATE TABLE Review (
 
-CREATE TABLE REVIEW (Id INT NOT NULL AUTO_INCREMENT, MeritScore INT, PaperId INT NOT NULL, ReviewerId VARCHAR(50) NOT NULL, ReadabilityScore INT, RelevanceScore INT, OriginalityScore INT, Recommendation MEDIUMTEXT, PRIMARY KEY (Id), FOREIGN KEY (PaperId) REFERENCES PAPER(Id), FOREIGN KEY (ReviewerID) REFERENCES REVIEWER (ReviewerEmailAddr));
+  Id INT NOT NULL,
+  MeritScore INT NULL,
+  PaperId INT NOT NULL,
+  ReviewerId VARCHAR(45) NOT NULL,
+  ReadabilityScore INT NULL,
+  RelevanceScore INT NULL,
+  OriginalityScore INT NULL,
+  Recommendation MEDIUMTEXT NULL,
+  PRIMARY KEY (Id)
+  
+  );
 
-CREATE TABLE SUBMITS_PAPER (PaperId INT NOT NULL, AuthorId VARCHAR(50) NOT NULL, FOREIGN KEY (PaperId) REFERENCES PAPER (Id), FOREIGN KEY (AuthorId) REFERENCES AUTHOR (EmailAddr));
+CREATE TABLE Reviewer (
 
-CREATE TABLE ASSIGNED_REVIEWER (PaperId INT NOT NULL, ReviewerId VARCHAR(50) NOT NULL, FOREIGN KEY (PaperId) REFERENCES PAPER(Id), FOREIGN KEY (ReviewerId) REFERENCES REVIEWER (ReviewerEmailAddr));
+  ReviewerEmailAddr VARCHAR(50) NOT NULL,
+  FirstName VARCHAR(45) NULL,
+  LastName VARCHAR(45) NULL,
+  PhoneNum VARCHAR(45) NULL,
+  AuthorFeedback TEXT NOT NULL,
+  CommiteeFeedback TEXT NOT NULL,
+  Affiliation TEXT NULL,
+  Review_Id INT NOT NULL,
+  PRIMARY KEY (ReviewerEmailAddr, Review_Id),
+  FOREIGN KEY (Review_Id)
+  REFERENCES Review (Id)
+  
+  );
 
-CREATE TABLE SUBMITS_REVIEW (Id INT NOT NULL, ReviewerId VARCHAR(50), FOREIGN KEY (Id) REFERENCES REVIEW (Id), FOREIGN KEY (ReviewerId) REFERENCES REVIEWER (ReviewerEmailAddr));
+CREATE TABLE Topic (
 
-CREATE TABLE HAS (Id INT NOT NULL, ReviewerId VARCHAR(50) NOT NULL, FOREIGN KEY (Id) REFERENCES Topic (Id), FOREIGN KEY (ReviewerId) REFERENCES REVIEWER (ReviewerEmailAddr));
+  Id INT NOT NULL,
+  TopicName VARCHAR(100) NULL,
+  Reviewer_ReviewerEmailAddr VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Id),
+  FOREIGN KEY (Reviewer_ReviewerEmailAddr)
+  REFERENCES Reviewer (ReviewerEmailAddr)
+  
+  );
+
+CREATE TABLE Reviewer_Assigned_Paper (
+
+  Paper_Id INT NOT NULL,
+  Reviewer_ReviewerEmailAddr VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Paper_Id, Reviewer_ReviewerEmailAddr),
+  FOREIGN KEY (Paper_Id)
+  REFERENCES Paper (Id),
+  FOREIGN KEY (Reviewer_ReviewerEmailAddr)
+  REFERENCES Reviewer (ReviewerEmailAddr)
+  
+  );
