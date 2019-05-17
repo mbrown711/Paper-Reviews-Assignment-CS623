@@ -1,21 +1,17 @@
-# Pace Spring 2019 DBMS Assignment 4
+# Pace Spring 2019 DBMS - Paper Reviews Assignment (Parts 1 & 2)
 
-## Matt Brown - U1561213
+### Matt Brown - U1561213
 
 File name ***PaperReview.sql*** contains scripts to:
 
 1. Create the database ```PaperReviews```
 2. Work with the ```PaperReviews``` database by executing ```USE PaperReviews```
 3. Creates the following tables:
-  - ```AUTHOR```
-  - ```PAPER```
-  - ```REVIEWER```
-  - ```TOPIC```
-  - ```REVIEW```
-  - ```SUBMITS_PAPER```
-  - ```ASSIGNED_REVIEWER```
-  - ```SUBMITS_REVIEW```
-  - ```HAS```
+  - ```Topic```
+  - ```Author```
+  - ```Reviewer```
+  - ```Paper```
+  - ```Review```
   
 4. Inserts data from the file titled PaperReviewDataInsert.sql
 
