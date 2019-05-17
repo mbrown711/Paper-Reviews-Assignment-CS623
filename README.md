@@ -1,8 +1,8 @@
-# Pace Spring 2019 DBMS - Paper Reviews Assignment (Parts 1 & 2)
+# Pace Spring 2019 DBMS - Paper Reviews Project Part 1:
 
 ### Matt Brown - U1561213
 
-File name ***PaperReview.sql*** contains scripts to:
+File name ***PaperReviews.sql*** contains scripts to:
 
 1. Create the database ```PaperReviews```
 2. Work with the ```PaperReviews``` database by executing ```USE PaperReviews```
@@ -13,7 +13,7 @@ File name ***PaperReview.sql*** contains scripts to:
   - ```Paper```
   - ```Review```
   
-4. Inserts data from the file titled PaperReviewDataInsert.sql
+4. Inserts data from the file titled PaperReviewsDataInsert.sql
 
 ## ***To run the .sql scripts:***
 
