@@ -6,13 +6,13 @@ USE PaperReviews;
 
 	Id INT AUTO_INCREMENT,
 	TopicName VARCHAR(55) NOT NULL,
-  PRIMARY KEY (Id)
+	PRIMARY KEY (Id)
 
 );
 
 CREATE TABLE Author (
 	
-  EmailAddr VARCHAR(100) PRIMARY KEY,
+	EmailAddr VARCHAR(100) PRIMARY KEY,
 	FirstName VARCHAR(100) NOT NULL,
 	LastName VARCHAR(100) NOT NULL
 
@@ -30,7 +30,7 @@ CREATE TABLE Reviewer (
 	Affiliation VARCHAR(100) NOT NULL,
 	TopicId INT NOT NULL,
 	FOREIGN KEY (TopicId) 
-  REFERENCES Topic(id)
+	REFERENCES Topic(id)
 
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE Paper (
 	AuthorId VARCHAR(100) NULL,
 	ReviewerId VARCHAR(100) NULL, 
 	FOREIGN KEY (AuthorId) 
-  REFERENCES Author(EmailAddr)
+	REFERENCES Author(EmailAddr)
 
 );
 
@@ -59,8 +59,8 @@ CREATE TABLE Review (
 	PaperId INT NOT NULL,
 	ReviewerId VARCHAR(100) NOT NULL,
 	FOREIGN KEY (PaperId) 
-  REFERENCES Paper (Id),
+	REFERENCES Paper (Id),
 	FOREIGN KEY (ReviewerId) 
-  REFERENCES Reviewer (ReviewerEmailAddr)
+	REFERENCES Reviewer (ReviewerEmailAddr)
 
 );
