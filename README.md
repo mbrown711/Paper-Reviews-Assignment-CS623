@@ -1,36 +1,12 @@
-# Pace Spring 2019 DBMS - Paper Reviews Project Part 1:
+# Pace Spring 2019 DBMS - Paper Reviews Project:
 
 ### Matt Brown - U1561213
 
-File name ***PaperReviews.sql*** contains scripts to:
+- The folder titled Part_1_SQL_Scripts contains: 
+  - The SQL scripts for Part 1 of the project.
+  - A README file that describes the scripts and how to execute them.
 
-1. Create the database ```PaperReviews```
-2. Work with the ```PaperReviews``` database by executing ```USE PaperReviews```
-3. Creates the following tables:
-  - ```Topic```
-  - ```Author```
-  - ```Reviewer```
-  - ```Paper```
-  - ```Review```
-  
-4. Inserts data from the file titled PaperReviewsDataInsert.sql
-
-## ***To run the .sql scripts:***
-
-1. Download **BOTH** SQL files and save them to a location on your computer (i.e. desktop).
-
-2. Open terminal and launch mysql with:
-
-```mysql -u <username> -p``` and enter your password.
-
-3. Type ```source <file path to> PaperReview.sql;```. For Example:
-
-    ```mysql> source /Users/macbook/Desktop/PaperReview.sql;```
-    
-  This will execute the script that creates the tables indicated above.
-    
-4. Repeat the same process, except use the file name PaperReviewDataInsert.sql. For example:
-
-    ```mysql> source /Users/macbook/Desktop/PaperReviewDataInsert.sql;```
-    
-    This will insert all of the data into each table that we created in step 3.
+- The folder titled Part_2_Java_Application contains:
+  - The Java program created for Part 2 of the project.
+  - A README file that explains the application and instructions on how to run it.
+  - MySQL Connector for Java - Version 8.0.15.
