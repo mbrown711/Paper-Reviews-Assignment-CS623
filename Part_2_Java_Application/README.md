@@ -4,6 +4,8 @@
 
 ***Quick Notes:***
 
+**Link to Screen Cast** - https://www.dropbox.com/s/fecryd8lv40evl0/Screen%20Cast%20-%20PaperReviews%20Project%20Part%202.mov?dl=0
+
 - Using IntelliJ IDE:
     - Intellij is a little different when it comes to adding the JDBC connector. To do so, click File --> Project Structure: 
         - Select "Libraries" on the left under "Project Settings". Click the + to add a new library. 
