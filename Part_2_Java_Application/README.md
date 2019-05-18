@@ -4,7 +4,11 @@
 
 ***Quick Notes:***
 
-- Using IntelliJ IDE.
+- Using IntelliJ IDE:
+    - Intellij is a little different when it comes to adding the JDBC connector. To do so, click File --> Project Structure: 
+        - Select "Libraries" on the left under "Project Settings". Click the + to add a new library. 
+        - You'll then be asked to select the library via the file explorer, and choose the entire JDBC folder (not just the .jar file).
+        - The JDBC is now added and ready to be used.
 - There is a known issue with the Time Zone and JDBC, returning an error. A workaround for this is to set the global time zone in MySQL. With MySQL running in a terminal window, enter the command ```SET GLOBAL time_zone = '+3:00';```. This will resolve the time zone error. (This error didn't occur on my Windows system, but it did for both Mac and Linux).
 
 - The java application titled "PaperReviewsApplication.java" contains the following methods:
