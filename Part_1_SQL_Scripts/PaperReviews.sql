@@ -41,8 +41,7 @@ CREATE TABLE Paper (
 	Title VARCHAR(100) NOT NULL,
 	Abstract TEXT,
 	FileName VARCHAR(50) NULL,
-	AuthorId VARCHAR(100) NULL,
-	ReviewerId VARCHAR(100) NULL, 
+	AuthorId VARCHAR(100) NULL, 
 	FOREIGN KEY (AuthorId) 
 	REFERENCES Author(EmailAddr)
 

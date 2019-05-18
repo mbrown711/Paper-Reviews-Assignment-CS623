@@ -10,3 +10,4 @@
   - The Java program created for Part 2 of the project.
   - A README file that explains the application and instructions on how to run it.
   - MySQL Connector for Java - Version 8.0.15.
+  - The screen cast walking through the Java application.

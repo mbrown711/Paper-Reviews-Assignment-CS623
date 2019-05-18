@@ -1,8 +1,8 @@
 import java.sql.*;
 
-public class PaperReviewsApplication {
+public class Main {
     //JDBC driver name and database URL:
-    //static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; <-- included in jdbc 8.0
+    //static final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; // <--uncomment if you need jdbc, included in jdbc 8.0
     static final String DB_URL = "jdbc:mysql://localhost:3306";
 
     //database credentials:
@@ -16,7 +16,7 @@ public class PaperReviewsApplication {
 
         try {
             //register JDBC driver:
-            //Class.forName(JDBC_DRIVER); <-- don't need class.forname with jdbc 8.0
+            //Class.forName(JDBC_DRIVER); //<-- don't need class.forname with jdbc 8.0, uncomment if you need jdbc
             //open a connection:
             System.out.println("Connecting to database...");
             connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
@@ -39,9 +39,9 @@ public class PaperReviewsApplication {
         } catch (SQLException sqlE) {
             //handle errors for JDBC:
             sqlE.printStackTrace();
-        } //catch (Exception e) {
+        } //catch (Exception e) { //<-- uncomment if you need jdbc
         //handle errors for class.forname <-- class.forname isn't needed with jdbc 8.0+
-        //e.printStackTrace(); }
+        //e.printStackTrace(); } //<-- uncomment if you need jdbc
         finally {
             //finally block used to close resources:
             try {
