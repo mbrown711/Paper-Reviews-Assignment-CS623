@@ -4,7 +4,7 @@
 
 ***Quick Notes:***
 
-**Link to Screen Cast** - https://www.dropbox.com/s/fecryd8lv40evl0/Screen%20Cast%20-%20PaperReviews%20Project%20Part%202.mov?dl=0
+**Link to Screen Cast** - https://drive.google.com/open?id=1SSj1IrubLk3wunUVjIdzSkvAZVBm5VEz
 
 - Using IntelliJ IDE:
     - Intellij is a little different when it comes to adding the JDBC connector. To do so, click File --> Project Structure: 
