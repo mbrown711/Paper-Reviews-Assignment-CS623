@@ -1,6 +1,6 @@
 # Pace Spring 2019 DBMS - Paper Reviews Project:
 
-### Matt Brown - U1561213
+### Matt Brown
 
 - The folder titled Part_1_SQL_Scripts contains: 
   - The SQL scripts for Part 1 of the project.
