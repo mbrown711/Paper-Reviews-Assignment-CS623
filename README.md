@@ -1,7 +1,5 @@
 # Pace Spring 2019 DBMS - Paper Reviews Project:
 
-### Matt Brown
-
 - The folder titled Part_1_SQL_Scripts contains: 
   - The SQL scripts for Part 1 of the project.
   - A README file that describes the scripts and how to execute them.
